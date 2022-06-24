@@ -105,6 +105,7 @@ class _MyHomeState extends State<MyHome> {
           child: Stack(
             children: [
               Container(
+                alignment: Alignment.topCenter,
                 margin: EdgeInsets.only(top: 35),
                 child: ShaderMask(
                   shaderCallback: (rect) {

@@ -31,6 +31,7 @@ class _MyAboutState extends State<MyAbout> {
           child: Stack(
             children: [
               Container(
+                alignment: Alignment.topCenter,
                 margin: EdgeInsets.only(top: 60),
                 child: ShaderMask(
                   shaderCallback: (rect) {
@@ -81,6 +82,9 @@ class _MyAboutState extends State<MyAbout> {
                         color: Colors.white,
                         fontSize:  20,
                     )),
+                    SizedBox(
+                      height: 10,
+                    ),
                     SizedBox(
                       width: 120,
                       child: TextButton(
