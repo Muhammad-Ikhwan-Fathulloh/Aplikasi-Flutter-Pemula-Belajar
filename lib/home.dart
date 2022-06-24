@@ -62,6 +62,28 @@ class _MyHomeState extends State<MyHome> {
       backgroundColor: Colors.black,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+        leading: PopupMenuButton(
+          color: Colors.black,
+          icon: Icon(Icons.menu),
+          itemBuilder: (context) => [
+            PopupMenuItem(
+              child: TextButton(
+                 child: Text('About Me', style: TextStyle(color: Colors.white)),
+                 onPressed: () {
+                  Navigator.pushNamed(context, 'about');
+                 }
+                ),
+              ),
+              PopupMenuItem(
+              child: TextButton(
+                 child: Text('Projects', style: TextStyle(color: Colors.white)),
+                 onPressed: () {
+                  Navigator.pushNamed(context, 'projects');
+                 }
+                ),
+              ),
+          ],
+        ),
         elevation: 0,
         backgroundColor: Colors.transparent,
       ),
@@ -119,7 +141,7 @@ class _MyHomeState extends State<MyHome> {
                       height: 2
                     ),
                     Text(
-                      'Backend Developer', 
+                      'IoT & Backend Developer', 
                       style: TextStyle(
                         color: Colors.white,
                         fontSize:  20,

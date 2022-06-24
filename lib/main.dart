@@ -5,7 +5,7 @@ import 'package:aplikasi_flutter_pemula/projects.dart';
 
 void main() {
   runApp(MaterialApp(
-    initialRoute: 'about',
+    initialRoute: 'home',
     debugShowCheckedModeBanner: false,
     routes: {
       'home' : (context) => MyHome(),
