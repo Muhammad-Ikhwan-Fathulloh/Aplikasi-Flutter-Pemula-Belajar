@@ -79,10 +79,59 @@ class _MyHomeState extends State<MyHome> {
         ),
         // The body widget will be displayed under the SlidingSheet
         // and a parallax effect can be applied to it.
-        body: Center(
-          child: Text('This widget is below the SlidingSheet', style: TextStyle(
-            color: Colors.white
-          )),
+        body: Container(
+          child: Stack(
+            children: [
+              Container(
+                margin: EdgeInsets.only(top: 35),
+                child: ShaderMask(
+                  shaderCallback: (rect) {
+                    return LinearGradient(
+                      begin: Alignment.center,
+                      end: Alignment.bottomCenter,
+                      colors: [Colors.black, Colors.transparent])
+                    .createShader(
+                      Rect.fromLTRB(0, 0, rect.width, rect.height)
+                    );
+                  },
+                  blendMode: BlendMode.dstIn,
+                  child: Image.asset(
+                    'assets/ikhwan.png', 
+                    height: 400, 
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                margin: EdgeInsets.only(
+                  top: MediaQuery.of(context).size.height * 0.49),
+                child: Column(
+                  children: [
+                    Text(
+                      'M Ikhwan Fathulloh', 
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize:  40,
+                        fontWeight: FontWeight.bold
+                    )),
+                    SizedBox(
+                      height: 2
+                    ),
+                    Text(
+                      'Backend Developer', 
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize:  20,
+                    )),
+                    SizedBox(
+                      height: 2
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
         builder: (context, state) {
           // This is the content of the sheet that will get
