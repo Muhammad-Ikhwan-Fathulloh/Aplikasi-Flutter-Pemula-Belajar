@@ -24,6 +24,38 @@ class _MyHomeState extends State<MyHome> {
     );
   }
 
+  mySpec(icon, tech){
+    return Container(
+                            width: 105,
+                            height:115,
+                            child: Card(
+                              margin: EdgeInsets.all(0),
+                              color: Color(0xff252525),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15)),
+                              child: Container(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      icon,
+                                      color: Colors.white,
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Text(
+                                      tech,
+                                      style: TextStyle(
+                                        color: Colors.white, fontSize: 16),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ),
+                          );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,22 +109,45 @@ class _MyHomeState extends State<MyHome> {
                   'Specialized In', 
                   style: TextStyle(fontSize:20, fontWeight: FontWeight.bold),
                   ),
+                  SizedBox(
+                    height: 10,
+                  ),
                   Column(
                     children: [
                       Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Container(
-                            width: 105,
-                            height:115,
-                            child: Card(
-                              color: Color(0xff252525),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15)
-                              )
-                            ),
-                          )
+                          mySpec(Icons.android, 'Android'),
+                          mySpec(Icons.android, 'Android'),
+                          mySpec(Icons.android, 'Android'),
                         ],
-                      )
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          mySpec(Icons.android, 'Android'),
+                          mySpec(Icons.android, 'Android'),
+                          mySpec(Icons.android, 'Android'),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          mySpec(Icons.android, 'Android'),
+                          mySpec(Icons.android, 'Android'),
+                          mySpec(Icons.android, 'Android'),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 10,
+                      ),
+                      
                     ]
                   )
               ],
