@@ -2,7 +2,7 @@
 
 Ini proyek flutter pertama untuk submisi dicoding :
 <ul>
-    <li><strong>Dokumentasi yang dipakai :</strong>Dokumentasi yang dipakai : https://pub.dev/</li>
+    <li><strong>Dokumentasi yang dipakai :</strong> https://pub.dev/</li>
 </ul>
 
 Lalu saya juga mencoba flutter web : https://docs.flutter.dev/get-started/web
