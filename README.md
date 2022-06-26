@@ -1,6 +1,6 @@
 # Aplikasi Flutter Pemula
 
-Ini proyek flutter pertama untuk submisi dicoding :
+Ini proyek flutter pertama :
 <ul>
     <li><strong>Dokumentasi yang dipakai :</strong> https://pub.dev/</li>
 </ul>
